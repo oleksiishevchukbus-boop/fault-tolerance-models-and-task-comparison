@@ -1,0 +1,6 @@
+model,severity,degradation,pearson,spearman,kendall
+tiny_vit_regressor_COMED,N_fail,delta_mae,0.8815659646384195,0.8827803494137247,0.7078891250629439
+tiny_vit_regressor_COMED,L_fault,delta_mae,0.6228993122312354,0.6911476503038139,0.5608525832843704
+tiny_vit_regressor_COMED,N_crit_fail,delta_mae,0.8971151556082071,0.8996312993011594,0.7657286873591898
+tiny_vit_regressor_COMED,W_fail,delta_mae,0.9301878542749987,0.9322323767888582,0.772478834789727
+tiny_vit_regressor_COMED,W_fail_mean,delta_mae,0.23393149205269792,0.3674519370335696,0.25474938409281755

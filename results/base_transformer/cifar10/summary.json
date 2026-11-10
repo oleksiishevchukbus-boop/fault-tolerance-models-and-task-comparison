@@ -1,0 +1,209 @@
+{
+  "model_name": "base_transformer_cifar10",
+  "n_heads": 32,
+  "n_layers": 4,
+  "k_trials": 10000,
+  "n_fault_eval_samples": 1000,
+  "clean_metrics": {
+    "accuracy": 0.81,
+    "precision": 0.8104559765746047,
+    "recall": 0.8099999999999999,
+    "f1": 0.8089308887354154,
+    "roc_auc": 0.9797277777777778
+  },
+  "single_head": {
+    "model": "base_transformer_cifar10",
+    "n_heads": 32,
+    "n_layers": 4,
+    "most_critical_head": "L1_H7",
+    "max_criticality": 0.05796658247709274,
+    "mean_criticality": 0.024122416274622083,
+    "median_criticality": 0.023686927743256092,
+    "min_criticality": 0.010417994111776352,
+    "mean_redundancy": 0.5838565041549819,
+    "n_heads_above_half_max": 6,
+    "most_fragile_layer_by_mean": 1,
+    "most_fragile_layer_by_mean_value": 0.030359714990481734,
+    "most_fragile_layer_by_max": 1,
+    "most_fragile_layer_by_max_value": 0.05796658247709274,
+    "clean_accuracy": 0.81,
+    "clean_precision": 0.8104559765746047,
+    "clean_recall": 0.8099999999999999,
+    "clean_f1": 0.8089308887354154,
+    "clean_roc_auc": 0.9797277777777778
+  },
+  "critical_heads": [
+    "L1_H7",
+    "L1_H1",
+    "L2_H4"
+  ],
+  "criticality_col": "D_pos_mean",
+  "degradation_col": "D_mean",
+  "safe_degradation_col": "D_pos_mean",
+  "severity_correlations": [
+    {
+      "severity": "N_fail",
+      "degradation": "D_mean",
+      "pearson": 0.9849558733888616,
+      "spearman": 0.991485172154026,
+      "kendall": 0.929870863374961,
+      "spearman_p": 0.0
+    },
+    {
+      "severity": "L_fault",
+      "degradation": "D_mean",
+      "pearson": 0.5817774012653634,
+      "spearman": 0.6522988220476463,
+      "kendall": 0.5400395986504493,
+      "spearman_p": 0.0
+    },
+    {
+      "severity": "N_crit_fail",
+      "degradation": "D_mean",
+      "pearson": 0.7876287049665169,
+      "spearman": 0.7940611556746039,
+      "kendall": 0.6484163301124944,
+      "spearman_p": 0.0
+    },
+    {
+      "severity": "W_fail",
+      "degradation": "D_mean",
+      "pearson": 0.9886202625938139,
+      "spearman": 0.9951941687356778,
+      "kendall": 0.9404521581386943,
+      "spearman_p": 0.0
+    },
+    {
+      "severity": "W_fail_mean",
+      "degradation": "D_mean",
+      "pearson": 0.03766843861224325,
+      "spearman": 0.12192883971945626,
+      "kendall": 0.07793567355398937,
+      "spearman_p": 1.9709032569464823e-34
+    }
+  ],
+  "safe_regions": [
+    {
+      "tau": 0.01,
+      "safe_boundary": NaN,
+      "n_fail_max": NaN,
+      "n_crit_fail_max": NaN,
+      "max_p_safe": 0.0,
+      "coverage_percent": 0.0,
+      "smallest_required_tau": 0.032831862568855286,
+      "n_boundaries_evaluated": 128,
+      "threshold_name": "tau_0.010"
+    },
+    {
+      "tau": 0.025,
+      "safe_boundary": NaN,
+      "n_fail_max": NaN,
+      "n_crit_fail_max": NaN,
+      "max_p_safe": 0.6818181818181818,
+      "coverage_percent": 0.0,
+      "smallest_required_tau": 0.032831862568855286,
+      "n_boundaries_evaluated": 128,
+      "threshold_name": "tau_0.025"
+    },
+    {
+      "tau": 0.05,
+      "safe_boundary": "N_fail<=2, N_crit_fail<=0",
+      "n_fail_max": 2.0,
+      "n_crit_fail_max": 0.0,
+      "max_p_safe": 0.9902534113060428,
+      "coverage_percent": 5.13,
+      "smallest_required_tau": 0.032831862568855286,
+      "n_boundaries_evaluated": 128,
+      "threshold_name": "tau_0.050"
+    }
+  ],
+  "criticality_profile": [
+    0.05796658247709274,
+    0.03502644971013069,
+    0.03327812999486923,
+    0.033206693828105927,
+    0.032831862568855286,
+    0.030628876760601997,
+    0.028542805463075638,
+    0.028503427281975746,
+    0.027559371665120125,
+    0.02748538926243782,
+    0.025748876854777336,
+    0.025485089048743248,
+    0.024571292102336884,
+    0.023979252204298973,
+    0.023862704634666443,
+    0.023735538125038147,
+    0.023638317361474037,
+    0.023548545315861702,
+    0.023305583745241165,
+    0.023235999047756195,
+    0.022540219128131866,
+    0.02234838530421257,
+    0.020714281126856804,
+    0.018571022897958755,
+    0.018375784158706665,
+    0.01696578413248062,
+    0.014996451325714588,
+    0.013444638811051846,
+    0.013290757313370705,
+    0.012953104451298714,
+    0.011158110573887825,
+    0.010417994111776352
+  ],
+  "median_over_max_criticality": 0.40863074431217455,
+  "n_heads_zero_effect": 0,
+  "worst_single_head": {
+    "head": "L1_H7",
+    "criticality": 0.05796658247709274,
+    "degradation": 0.03158310800790787,
+    "safe_degradation": 0.05796658247709274
+  },
+  "dataset": "CIFAR-10",
+  "class_names": [
+    "airplane",
+    "automobile",
+    "bird",
+    "cat",
+    "deer",
+    "dog",
+    "frog",
+    "horse",
+    "ship",
+    "truck"
+  ],
+  "patch_size": 4,
+  "n_tokens": 64,
+  "train_config": {
+    "loss": "CrossEntropyLoss",
+    "optimizer": "AdamW",
+    "learning_rate": 0.0006,
+    "weight_decay": 0.05,
+    "batch_size": 128,
+    "epochs": 40,
+    "patience": 8,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.1,
+    "selection_metric": "roc_auc",
+    "cosine_schedule": true,
+    "augmentation": "RandomCrop(32, padding=4) + RandomHorizontalFlip"
+  },
+  "model_config": {
+    "d_model": 256,
+    "num_heads": 8,
+    "num_layers": 4,
+    "d_ff": 1024,
+    "dropout": 0.05,
+    "activation": "relu"
+  },
+  "calibration_clean_metrics": {
+    "accuracy": 0.8054444444444444,
+    "precision": 0.8044628427981646,
+    "recall": 0.8054444444444444,
+    "f1": 0.8042849640411784,
+    "roc_auc": 0.9775069410150892
+  },
+  "n_params": 3174410,
+  "best_val_score": 0.9780084627847021,
+  "seconds_per_evaluation": 0.10305981636047364
+}

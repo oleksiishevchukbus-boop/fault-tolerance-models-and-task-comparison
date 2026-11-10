@@ -1,0 +1,202 @@
+{
+  "model_name": "base_transformer_regressor_PJM_Load",
+  "n_heads": 32,
+  "n_layers": 4,
+  "k_trials": 10000,
+  "n_fault_eval_samples": 1000,
+  "clean_metrics": {
+    "mse": 0.00025831555213859614,
+    "rmse": 0.01607219811160241,
+    "mae": 0.011347898481413722,
+    "mape": 1.3985001759304683
+  },
+  "single_head": {
+    "model": "base_transformer_regressor_PJM_Load",
+    "n_heads": 32,
+    "n_layers": 4,
+    "most_critical_head": "L3_H7",
+    "max_criticality": 0.04147339834272862,
+    "mean_criticality": 0.0063584530289517716,
+    "median_criticality": 0.004242683529853821,
+    "min_criticality": 0.0007416653484106064,
+    "mean_redundancy": 0.8466859895045649,
+    "n_heads_above_half_max": 2,
+    "most_fragile_layer_by_mean": 3,
+    "most_fragile_layer_by_mean_value": 0.012620559766888619,
+    "most_fragile_layer_by_max": 3,
+    "most_fragile_layer_by_max_value": 0.04147339834272862,
+    "clean_mse": 0.00025831555213859614,
+    "clean_rmse": 0.01607219811160241,
+    "clean_mae": 0.011347898481413722,
+    "clean_mape": 1.3985001759304683
+  },
+  "critical_heads": [
+    "L3_H7",
+    "L3_H3",
+    "L3_H6"
+  ],
+  "criticality_col": "mean_harmful_error_change",
+  "degradation_col": "delta_mae",
+  "safe_degradation_col": "delta_mape",
+  "severity_correlations": [
+    {
+      "model": "base_transformer_regressor_PJM_Load",
+      "severity": "N_fail",
+      "degradation": "delta_mae",
+      "pearson": 0.910418911762511,
+      "spearman": 0.9127049019690198,
+      "kendall": 0.7554420994395579
+    },
+    {
+      "model": "base_transformer_regressor_PJM_Load",
+      "severity": "L_fault",
+      "degradation": "delta_mae",
+      "pearson": 0.5825807636151081,
+      "spearman": 0.6036750482476705,
+      "kendall": 0.49225997021270046
+    },
+    {
+      "model": "base_transformer_regressor_PJM_Load",
+      "severity": "N_crit_fail",
+      "degradation": "delta_mae",
+      "pearson": 0.8903491647085771,
+      "spearman": 0.88813616054366,
+      "kendall": 0.7552889156541388
+    },
+    {
+      "model": "base_transformer_regressor_PJM_Load",
+      "severity": "W_fail",
+      "degradation": "delta_mae",
+      "pearson": 0.9573030449225544,
+      "spearman": 0.9576451204879297,
+      "kendall": 0.8253931568799533
+    },
+    {
+      "model": "base_transformer_regressor_PJM_Load",
+      "severity": "W_fail_mean",
+      "degradation": "delta_mae",
+      "pearson": 0.24782238153839,
+      "spearman": 0.4340504265315207,
+      "kendall": 0.28489550227289795
+    }
+  ],
+  "criticality_profile": [
+    0.04147339834272862,
+    0.0231673554033041,
+    0.015475718416273593,
+    0.010221763491630554,
+    0.009142510384321213,
+    0.008885066024959087,
+    0.008747843645513058,
+    0.00794192785769701,
+    0.0063432697057724,
+    0.006266570046544075,
+    0.005833187520503998,
+    0.005182026423513889,
+    0.005109871864318848,
+    0.004780531994998455,
+    0.004698710016906261,
+    0.004407339215278625,
+    0.004078027844429016,
+    0.003637898102402687,
+    0.0035063915587961675,
+    0.003286135662347078,
+    0.002736378937959671,
+    0.002691176563501358,
+    0.002589677307754755,
+    0.0022075998932123185,
+    0.001973624028265476,
+    0.00184516841173172,
+    0.0017116197124123573,
+    0.0014493538215756417,
+    0.0013825148046016694,
+    0.001155823402106762,
+    0.0008003511726856232,
+    0.0007416653484106064
+  ],
+  "safe_regions": [
+    {
+      "tau": 0.13985001759304683,
+      "safe_boundary": null,
+      "n_fail_max": null,
+      "n_crit_fail_max": null,
+      "max_p_safe": 0.3754646840148699,
+      "coverage_percent": 0.0,
+      "smallest_required_tau": 0.8497479672665667,
+      "n_boundaries_evaluated": 128,
+      "threshold_name": "10%_of_clean_mape"
+    },
+    {
+      "tau": 0.34962504398261707,
+      "safe_boundary": null,
+      "n_fail_max": null,
+      "n_crit_fail_max": null,
+      "max_p_safe": 0.6022304832713755,
+      "coverage_percent": 0.0,
+      "smallest_required_tau": 0.8497479672665667,
+      "n_boundaries_evaluated": 128,
+      "threshold_name": "25%_of_clean_mape"
+    },
+    {
+      "tau": 0.6992500879652341,
+      "safe_boundary": null,
+      "n_fail_max": null,
+      "n_crit_fail_max": null,
+      "max_p_safe": 0.828996282527881,
+      "coverage_percent": 0.0,
+      "smallest_required_tau": 0.8497479672665667,
+      "n_boundaries_evaluated": 128,
+      "threshold_name": "50%_of_clean_mape"
+    }
+  ],
+  "median_over_max_criticality": 0.10229891205660933,
+  "n_heads_zero_effect": 0,
+  "worst_single_head": {
+    "head": "L3_H7",
+    "criticality": 0.04147339834272862,
+    "degradation": 0.040212823346257205,
+    "safe_degradation": 5.369515972335526
+  },
+  "region": "PJM_Load",
+  "series_meta": {
+    "value_col": "PJM_Load_MW",
+    "n_obs": 32896,
+    "min_mw": 17461.0,
+    "max_mw": 54030.0,
+    "start": "1998-04-01 01:00:00",
+    "end": "2002-01-01 00:00:00"
+  },
+  "window_size": 20,
+  "train_config": {
+    "loss": "MSELoss",
+    "optimizer": "AdamW",
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "batch_size": 128,
+    "epochs": 50,
+    "patience": 8,
+    "grad_clip": 1.0,
+    "selection_metric": "val_mae"
+  },
+  "model_config": {
+    "d_model": 256,
+    "num_heads": 8,
+    "num_layers": 4,
+    "d_ff": 1024,
+    "dropout": 0.05,
+    "activation": "silu"
+  },
+  "held_out_test_metrics": {
+    "mse": 0.0002632676597012169,
+    "rmse": 0.01622552494377969,
+    "mae": 0.011759903486322314,
+    "mape": 1.4715999463273666
+  },
+  "n_params": 3160065,
+  "best_val_mae": 0.011219024985759544,
+  "clean_mape_thresholds": {
+    "10%_of_clean_mape": 0.13985001759304683,
+    "25%_of_clean_mape": 0.34962504398261707,
+    "50%_of_clean_mape": 0.6992500879652341
+  }
+}

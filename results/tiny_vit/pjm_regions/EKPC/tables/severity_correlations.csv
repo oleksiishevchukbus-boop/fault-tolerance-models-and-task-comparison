@@ -1,0 +1,6 @@
+model,severity,degradation,pearson,spearman,kendall
+tiny_vit_regressor_EKPC,N_fail,delta_mae,0.8400354728231832,0.8562773106025471,0.6794126475475236
+tiny_vit_regressor_EKPC,L_fault,delta_mae,0.5725581047580273,0.666067336865644,0.5372048743381058
+tiny_vit_regressor_EKPC,N_crit_fail,delta_mae,0.899318035788977,0.9031354857429946,0.767064555214319
+tiny_vit_regressor_EKPC,W_fail,delta_mae,0.9559024658886519,0.9616722407087589,0.8279015659911443
+tiny_vit_regressor_EKPC,W_fail_mean,delta_mae,0.30514104771372363,0.5960895823088298,0.3940615514215711

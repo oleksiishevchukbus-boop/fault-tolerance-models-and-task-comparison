@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "faulttol"
+version = "1.0.0"
+description = "Attention-head fault-tolerance toolkit: crash injection, criticality, safe regions"
+readme = "README.md"
+requires-python = ">=3.12"
+# Exact pins (and the CUDA torch install) live in requirements.txt.
+dependencies = [
+    "numpy",
+    "pandas",
+    "scipy",
+    "scikit-learn",
+    "matplotlib",
+    "torch",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,6 @@
+model,severity,degradation,pearson,spearman,kendall
+tiny_gpt2_regressor_PJM_Load,N_fail,delta_mae,0.8507944093745193,0.8677811504165578,0.7082060954772053
+tiny_gpt2_regressor_PJM_Load,L_fault,delta_mae,0.6284264214648692,0.6848177598607685,0.5587208480952292
+tiny_gpt2_regressor_PJM_Load,N_crit_fail,delta_mae,0.8753236809359297,0.8795080003508327,0.739319508476842
+tiny_gpt2_regressor_PJM_Load,W_fail,delta_mae,0.9467975368949912,0.9540932880795551,0.8209987205282948
+tiny_gpt2_regressor_PJM_Load,W_fail_mean,delta_mae,0.2692474036239081,0.5378185385462892,0.3460901666531093

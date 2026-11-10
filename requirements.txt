@@ -1,0 +1,31 @@
+# Environment for the attention-head fault-tolerance experiments.
+#
+# torch must come from the CUDA wheel index - the PyPI Windows wheel is
+# CPU-only, and the notebooks select CUDA automatically when it is available:
+#
+#   python -m venv .venv
+#   .venv\Scripts\python -m pip install --upgrade pip
+#   .venv\Scripts\python -m pip install torch==2.14.0+cu126 --index-url https://download.pytorch.org/whl/cu126
+#   .venv\Scripts\python -m pip install -r requirements.txt
+#   .venv\Scripts\python -m pip install -e .          # makes `import faulttol` work anywhere
+#   .venv\Scripts\python -m ipykernel install --user --name ft-python
+#
+# Verified on Python 3.12.10, Windows 11, RTX 4070 Laptop (sm_89), driver 610.88.
+# torchvision is deliberately absent: CIFAR-10 is read from its tar archive and
+# the augmentation is implemented in the notebook.
+
+numpy==2.5.3
+pandas==3.0.5
+scipy==1.18.1
+scikit-learn==1.9.0
+matplotlib==3.11.1
+
+# scripts/make_experiment_report.py
+python-docx==1.2.0
+
+# notebook execution (scripts/run_family.sh drives nbconvert with the ft-python kernel)
+ipykernel==7.3.0
+nbconvert==7.17.1
+nbclient==0.11.0
+jupyter==1.1.1
+jupyterlab==4.6.3

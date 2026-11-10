@@ -1,0 +1,6 @@
+model,severity,degradation,pearson,spearman,kendall
+base_transformer_regressor_EKPC,N_fail,delta_mae,0.92118670789972,0.9213454340417775,0.7634081448523479
+base_transformer_regressor_EKPC,L_fault,delta_mae,0.5851541739748876,0.6146877721494951,0.5018069662772476
+base_transformer_regressor_EKPC,N_crit_fail,delta_mae,0.8715052231499336,0.8699054780535249,0.7314036853193754
+base_transformer_regressor_EKPC,W_fail,delta_mae,0.9585595029656054,0.9580100017387192,0.8224888530227441
+base_transformer_regressor_EKPC,W_fail_mean,delta_mae,0.2047782080343552,0.33804176027711197,0.22972293382701814

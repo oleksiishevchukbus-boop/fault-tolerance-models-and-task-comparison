@@ -1,0 +1,6 @@
+model,severity,degradation,pearson,spearman,kendall
+base_transformer_regressor_PJM_Load,N_fail,delta_mae,0.910418911762511,0.9127049019690198,0.7554420994395579
+base_transformer_regressor_PJM_Load,L_fault,delta_mae,0.5825807636151081,0.6036750482476705,0.49225997021270046
+base_transformer_regressor_PJM_Load,N_crit_fail,delta_mae,0.8903491647085771,0.88813616054366,0.7552889156541388
+base_transformer_regressor_PJM_Load,W_fail,delta_mae,0.9573030449225544,0.9576451204879297,0.8253931568799533
+base_transformer_regressor_PJM_Load,W_fail_mean,delta_mae,0.24782238153839,0.4340504265315207,0.28489550227289795

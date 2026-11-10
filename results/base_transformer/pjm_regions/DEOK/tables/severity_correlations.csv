@@ -1,0 +1,6 @@
+model,severity,degradation,pearson,spearman,kendall
+base_transformer_regressor_DEOK,N_fail,delta_mae,0.9014404448798387,0.9020603059239811,0.7373111538391696
+base_transformer_regressor_DEOK,L_fault,delta_mae,0.577267522244268,0.5996418621951562,0.48852454647779564
+base_transformer_regressor_DEOK,N_crit_fail,delta_mae,0.8880088337811889,0.8864511665681211,0.7528930108013621
+base_transformer_regressor_DEOK,W_fail,delta_mae,0.938359450217034,0.9379610595959831,0.7846976911476728
+base_transformer_regressor_DEOK,W_fail_mean,delta_mae,0.2243770667168931,0.3770813157974646,0.25176166788033766

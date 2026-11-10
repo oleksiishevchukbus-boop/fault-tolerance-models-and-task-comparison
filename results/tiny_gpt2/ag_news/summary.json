@@ -1,0 +1,212 @@
+{
+  "model_name": "tiny_gpt2_agnews",
+  "n_heads": 36,
+  "n_layers": 6,
+  "k_trials": 10000,
+  "n_fault_eval_samples": 1000,
+  "clean_metrics": {
+    "accuracy": 0.908,
+    "precision": 0.9087134573552822,
+    "recall": 0.9079999999999999,
+    "f1": 0.907919666873372,
+    "roc_auc": 0.986916
+  },
+  "single_head": {
+    "model": "tiny_gpt2_agnews",
+    "n_heads": 36,
+    "n_layers": 6,
+    "most_critical_head": "L0_H4",
+    "max_criticality": 0.020581230521202087,
+    "mean_criticality": 0.0079363577242475,
+    "median_criticality": 0.00598604790866375,
+    "min_criticality": 0.0016027793753892183,
+    "mean_redundancy": 0.6143885704168113,
+    "n_heads_above_half_max": 10,
+    "most_fragile_layer_by_mean": 0,
+    "most_fragile_layer_by_mean_value": 0.019111069850623608,
+    "most_fragile_layer_by_max": 0,
+    "most_fragile_layer_by_max_value": 0.020581230521202087,
+    "clean_accuracy": 0.908,
+    "clean_precision": 0.9087134573552822,
+    "clean_recall": 0.9079999999999999,
+    "clean_f1": 0.907919666873372,
+    "clean_roc_auc": 0.986916
+  },
+  "critical_heads": [
+    "L0_H4",
+    "L0_H1",
+    "L0_H5",
+    "L0_H3"
+  ],
+  "criticality_col": "D_pos_mean",
+  "degradation_col": "D_mean",
+  "safe_degradation_col": "D_pos_mean",
+  "severity_correlations": [
+    {
+      "severity": "N_fail",
+      "degradation": "D_mean",
+      "pearson": 0.9121902417778089,
+      "spearman": 0.9742332887580548,
+      "kendall": 0.870421589148623,
+      "spearman_p": 0.0
+    },
+    {
+      "severity": "L_fault",
+      "degradation": "D_mean",
+      "pearson": 0.4945348149832436,
+      "spearman": 0.7594893272622093,
+      "kendall": 0.6287326019010769,
+      "spearman_p": 0.0
+    },
+    {
+      "severity": "N_crit_fail",
+      "degradation": "D_mean",
+      "pearson": 0.8143443345908276,
+      "spearman": 0.8837923100829079,
+      "kendall": 0.7463446802079615,
+      "spearman_p": 0.0
+    },
+    {
+      "severity": "W_fail",
+      "degradation": "D_mean",
+      "pearson": 0.9215868615515037,
+      "spearman": 0.9904920529115727,
+      "kendall": 0.9145057965982006,
+      "spearman_p": 0.0
+    },
+    {
+      "severity": "W_fail_mean",
+      "degradation": "D_mean",
+      "pearson": 0.07668439792932018,
+      "spearman": 0.22527012929673462,
+      "kendall": 0.15020044779608757,
+      "spearman_p": 3.0325904970081086e-115
+    }
+  ],
+  "safe_regions": [
+    {
+      "tau": 0.01,
+      "safe_boundary": NaN,
+      "n_fail_max": NaN,
+      "n_crit_fail_max": NaN,
+      "max_p_safe": 0.7715355805243446,
+      "coverage_percent": 0.0,
+      "smallest_required_tau": 0.017255501821637154,
+      "n_boundaries_evaluated": 180,
+      "threshold_name": "tau_0.010"
+    },
+    {
+      "tau": 0.025,
+      "safe_boundary": "N_fail<=4, N_crit_fail<=0",
+      "n_fail_max": 4.0,
+      "n_crit_fail_max": 0.0,
+      "max_p_safe": 0.9504036908881199,
+      "coverage_percent": 8.67,
+      "smallest_required_tau": 0.017255501821637154,
+      "n_boundaries_evaluated": 180,
+      "threshold_name": "tau_0.025"
+    },
+    {
+      "tau": 0.05,
+      "safe_boundary": "N_fail<=8, N_crit_fail<=1",
+      "n_fail_max": 8.0,
+      "n_crit_fail_max": 1.0,
+      "max_p_safe": 0.9607655502392345,
+      "coverage_percent": 20.9,
+      "smallest_required_tau": 0.017255501821637154,
+      "n_boundaries_evaluated": 180,
+      "threshold_name": "tau_0.050"
+    }
+  ],
+  "criticality_profile": [
+    0.020581230521202087,
+    0.020391762256622314,
+    0.019886961206793785,
+    0.01843295991420746,
+    0.018118003383278847,
+    0.017255501821637154,
+    0.016802702099084854,
+    0.013294982723891735,
+    0.01209656149148941,
+    0.011845972388982773,
+    0.010171562433242798,
+    0.01013695728033781,
+    0.009418847039341927,
+    0.007607204839587212,
+    0.007205173373222351,
+    0.006711565889418125,
+    0.006075139623135328,
+    0.006057919003069401,
+    0.005914176814258099,
+    0.00536973075941205,
+    0.004804406780749559,
+    0.004225056152790785,
+    0.0036755972541868687,
+    0.003239184385165572,
+    0.003230729606002569,
+    0.002383059822022915,
+    0.0023817308247089386,
+    0.002373138442635536,
+    0.002346751745790243,
+    0.002336581703275442,
+    0.002319490071386099,
+    0.00225107092410326,
+    0.001794521464034915,
+    0.0017577414400875568,
+    0.0016121232183650136,
+    0.0016027793753892183
+  ],
+  "median_over_max_criticality": 0.2908498547842548,
+  "n_heads_zero_effect": 0,
+  "worst_single_head": {
+    "head": "L0_H4",
+    "criticality": 0.020581230521202087,
+    "degradation": 0.008441484533250332,
+    "safe_degradation": 0.020581230521202087
+  },
+  "dataset": "AG News",
+  "class_names": [
+    "World",
+    "Sports",
+    "Business",
+    "Sci/Tech"
+  ],
+  "max_len": 64,
+  "vocab_size": 30000,
+  "train_config": {
+    "loss": "CrossEntropyLoss",
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "batch_size": 128,
+    "epochs": 12,
+    "patience": 3,
+    "grad_clip": 1.0,
+    "selection_metric": "roc_auc",
+    "cosine_schedule": true
+  },
+  "model_config": {
+    "d_model": 384,
+    "num_heads": 6,
+    "num_layers": 6,
+    "d_ff": 1536,
+    "dropout": 0.05,
+    "norm_first": true,
+    "qkv_bias": false,
+    "bias": false,
+    "learned_pe": true,
+    "causal": true,
+    "cls_last": true,
+    "activation": "gelu"
+  },
+  "calibration_clean_metrics": {
+    "accuracy": 0.9131818181818182,
+    "precision": 0.9136078028159037,
+    "recall": 0.9131818181818182,
+    "f1": 0.9131911777867884,
+    "roc_auc": 0.9850583715947352
+  },
+  "n_params": 22168708,
+  "best_val_score": 0.9868260494347518,
+  "seconds_per_evaluation": 0.2663433074951172
+}
