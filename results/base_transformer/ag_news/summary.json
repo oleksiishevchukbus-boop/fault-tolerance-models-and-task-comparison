@@ -197,5 +197,5 @@
   },
   "n_params": 10840324,
   "best_val_score": 0.9859870313115706,
-  "seconds_per_evaluation": 0.10195164680480957
+  "seconds_per_evaluation": 0.10159177780151367
 }
