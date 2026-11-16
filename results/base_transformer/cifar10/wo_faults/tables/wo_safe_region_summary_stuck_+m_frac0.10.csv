@@ -1,0 +1,4 @@
+tau,safe_boundary,n_fail_max,n_crit_fail_max,max_p_safe,coverage_percent,smallest_required_tau,n_boundaries_evaluated,threshold_name
+0.01,,,,0.34615384615384615,0.0,0.01727297594770789,124,tau_0.010
+0.025,"N_fail<=3, N_crit_fail<=2",3.0,2.0,0.9787234042553191,9.4,0.01727297594770789,124,tau_0.025
+0.05,"N_fail<=12, N_crit_fail<=3",12.0,3.0,0.9595536959553695,35.85,0.01727297594770789,124,tau_0.050

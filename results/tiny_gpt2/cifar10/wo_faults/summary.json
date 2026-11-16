@@ -1,0 +1,568 @@
+{
+  "model_name": "tiny_gpt2_cifar10",
+  "checkpoint": "results\\tiny_gpt2\\cifar10\\models\\best.pt",
+  "fault_location": "W_o.weight[:, h*d_k:(h+1)*d_k] (the head's columns of the output projection)",
+  "n_fault_eval_samples": 1000,
+  "clean_metrics": {
+    "accuracy": 0.758,
+    "precision": 0.7568988922097417,
+    "recall": 0.758,
+    "f1": 0.7561815694260791,
+    "roc_auc": 0.9710555555555554
+  },
+  "seconds_per_evaluation": 0.2995146751403809,
+  "parameters": {
+    "wo_repeats": 10,
+    "wo_k_trials": 2000,
+    "ber_levels": [
+      1e-06,
+      1e-05,
+      0.0001,
+      0.001
+    ],
+    "stuck_values_rel": [
+      0.0,
+      1.0,
+      -1.0
+    ],
+    "stuck_fracs": [
+      0.01,
+      0.1,
+      0.5,
+      1.0
+    ],
+    "multihead_settings": [
+      {
+        "setting": "bitflip_ber1e-4",
+        "spec": {
+          "kind": "bitflip_ber",
+          "p": 0.0001
+        }
+      },
+      {
+        "setting": "stuck_+m_frac0.10",
+        "spec": {
+          "kind": "stuck_at",
+          "value_rel": 1.0,
+          "frac": 0.1
+        }
+      }
+    ],
+    "value_grid": [
+      [
+        "0",
+        0.0,
+        "abs"
+      ],
+      [
+        "+m/2",
+        0.5,
+        "rel"
+      ],
+      [
+        "-m/2",
+        -0.5,
+        "rel"
+      ],
+      [
+        "+m",
+        1.0,
+        "rel"
+      ],
+      [
+        "-m",
+        -1.0,
+        "rel"
+      ],
+      [
+        "+10m",
+        10.0,
+        "rel"
+      ],
+      [
+        "-10m",
+        -10.0,
+        "rel"
+      ],
+      [
+        "+1e2",
+        100.0,
+        "abs"
+      ],
+      [
+        "-1e2",
+        -100.0,
+        "abs"
+      ],
+      [
+        "+1e4",
+        10000.0,
+        "abs"
+      ],
+      [
+        "-1e4",
+        -10000.0,
+        "abs"
+      ],
+      [
+        "+1e6",
+        1000000.0,
+        "abs"
+      ],
+      [
+        "-1e6",
+        -1000000.0,
+        "abs"
+      ]
+    ],
+    "sweep_single": 50,
+    "sweep_rows": 8,
+    "sweep_columns": 8,
+    "deepdive_samples": 30,
+    "fault_seed": 4242,
+    "m_layer": [
+      0.21236836910247803,
+      0.267775297164917,
+      0.21988976001739502,
+      0.24560117721557617,
+      0.18708372116088867,
+      0.172193244099617
+    ]
+  },
+  "deep_dive_heads": [
+    {
+      "head": "L0_H5",
+      "role": "top1",
+      "crash_criticality": 0.38032665848731995
+    },
+    {
+      "head": "L0_H3",
+      "role": "top2",
+      "crash_criticality": 0.13046881556510925
+    },
+    {
+      "head": "L0_H2",
+      "role": "top3",
+      "crash_criticality": 0.07591885328292847
+    },
+    {
+      "head": "L4_H0",
+      "role": "least",
+      "crash_criticality": 0.011820659972727299
+    }
+  ],
+  "sanity": [
+    {
+      "check": "ber0_vs_clean",
+      "n": 36,
+      "all_exact": true,
+      "max_abs_diff": 0.0
+    },
+    {
+      "check": "double_flip_vs_clean",
+      "n": 36,
+      "all_exact": true,
+      "max_abs_diff": 0.0
+    },
+    {
+      "check": "zero_vs_mask_multi",
+      "n": 50,
+      "all_exact": true,
+      "max_abs_diff": 0.0
+    },
+    {
+      "check": "zero_vs_mask_single",
+      "n": 36,
+      "all_exact": true,
+      "max_abs_diff": 0.0
+    }
+  ],
+  "single_head_vs_crash": [
+    {
+      "fault_model": "bitflip",
+      "level": "ber=1e-06",
+      "mean_criticality": 0.012225072203829897,
+      "max_criticality": 0.05493950728003989,
+      "most_critical_head": "L4_H0",
+      "ratio_to_crash_mean": 0.3172883766250858,
+      "spearman_vs_crash": 0.14285714285714285,
+      "top3_overlap_with_crash": 0,
+      "catastrophic_rate": 0.011111111111111112
+    },
+    {
+      "fault_model": "bitflip",
+      "level": "ber=1e-05",
+      "mean_criticality": 0.12214003852763954,
+      "max_criticality": 0.2747269573270671,
+      "most_critical_head": "L3_H0",
+      "ratio_to_crash_mean": 3.170011096803123,
+      "spearman_vs_crash": 0.1142857142857143,
+      "top3_overlap_with_crash": 0,
+      "catastrophic_rate": 0.08055555555555556
+    },
+    {
+      "fault_model": "bitflip",
+      "level": "ber=0.0001",
+      "mean_criticality": 0.515827723244921,
+      "max_criticality": 0.5493748545646667,
+      "most_critical_head": "L4_H3",
+      "ratio_to_crash_mean": 13.387744317397269,
+      "spearman_vs_crash": 0.04108557993610845,
+      "top3_overlap_with_crash": 0,
+      "catastrophic_rate": 0.6055555555555556
+    },
+    {
+      "fault_model": "bitflip",
+      "level": "ber=0.001",
+      "mean_criticality": 0.5493707656860352,
+      "max_criticality": 0.5493707656860352,
+      "most_critical_head": "L0_H0",
+      "ratio_to_crash_mean": 14.258317292816855,
+      "spearman_vs_crash": NaN,
+      "top3_overlap_with_crash": 1,
+      "catastrophic_rate": 1.0
+    },
+    {
+      "fault_model": "stuck_at_0",
+      "level": "frac=0.01",
+      "mean_criticality": 0.0004168308577290089,
+      "max_criticality": 0.002020326757337898,
+      "most_critical_head": "L0_H5",
+      "ratio_to_crash_mean": 0.010818388960896772,
+      "spearman_vs_crash": 0.8684684684684685,
+      "top3_overlap_with_crash": 3,
+      "catastrophic_rate": 0.0
+    },
+    {
+      "fault_model": "stuck_at_0",
+      "level": "frac=0.1",
+      "mean_criticality": 0.0026542557267627367,
+      "max_criticality": 0.014065492525696754,
+      "most_critical_head": "L0_H5",
+      "ratio_to_crash_mean": 0.06888830402396731,
+      "spearman_vs_crash": 0.9824967824967825,
+      "top3_overlap_with_crash": 3,
+      "catastrophic_rate": 0.0
+    },
+    {
+      "fault_model": "stuck_at_0",
+      "level": "frac=0.5",
+      "mean_criticality": 0.015187231288291513,
+      "max_criticality": 0.11661451309919357,
+      "most_critical_head": "L0_H5",
+      "ratio_to_crash_mean": 0.3941679754972819,
+      "spearman_vs_crash": 0.9966537966537966,
+      "top3_overlap_with_crash": 2,
+      "catastrophic_rate": 0.0
+    },
+    {
+      "fault_model": "stuck_at_0",
+      "level": "frac=1",
+      "mean_criticality": 0.03852984573071202,
+      "max_criticality": 0.38032665848731995,
+      "most_critical_head": "L0_H5",
+      "ratio_to_crash_mean": 0.9999999999740461,
+      "spearman_vs_crash": 1.0,
+      "top3_overlap_with_crash": 3,
+      "catastrophic_rate": 0.0
+    },
+    {
+      "fault_model": "stuck_at_+m",
+      "level": "frac=0.01",
+      "mean_criticality": 0.0018179078426328486,
+      "max_criticality": 0.00817232895642519,
+      "most_critical_head": "L0_H5",
+      "ratio_to_crash_mean": 0.047181809532567585,
+      "spearman_vs_crash": 0.7214929214929217,
+      "top3_overlap_with_crash": 3,
+      "catastrophic_rate": 0.0
+    },
+    {
+      "fault_model": "stuck_at_+m",
+      "level": "frac=0.1",
+      "mean_criticality": 0.006596462267851975,
+      "max_criticality": 0.03362993896007538,
+      "most_critical_head": "L0_H5",
+      "ratio_to_crash_mean": 0.17120396260561074,
+      "spearman_vs_crash": 0.7976833976833978,
+      "top3_overlap_with_crash": 3,
+      "catastrophic_rate": 0.0
+    },
+    {
+      "fault_model": "stuck_at_+m",
+      "level": "frac=0.5",
+      "mean_criticality": 0.02034346202595366,
+      "max_criticality": 0.15055613964796066,
+      "most_critical_head": "L0_H5",
+      "ratio_to_crash_mean": 0.5279923041376197,
+      "spearman_vs_crash": 0.9124839124839126,
+      "top3_overlap_with_crash": 3,
+      "catastrophic_rate": 0.0
+    },
+    {
+      "fault_model": "stuck_at_+m",
+      "level": "frac=1",
+      "mean_criticality": 0.03852984560136166,
+      "max_criticality": 0.38032665848731995,
+      "most_critical_head": "L0_H5",
+      "ratio_to_crash_mean": 0.9999999966168991,
+      "spearman_vs_crash": 1.0,
+      "top3_overlap_with_crash": 3,
+      "catastrophic_rate": 0.0
+    },
+    {
+      "fault_model": "stuck_at_-m",
+      "level": "frac=0.01",
+      "mean_criticality": 0.0017940201854798948,
+      "max_criticality": 0.007387167681008578,
+      "most_critical_head": "L0_H5",
+      "ratio_to_crash_mean": 0.04656183152073524,
+      "spearman_vs_crash": 0.7420849420849421,
+      "top3_overlap_with_crash": 3,
+      "catastrophic_rate": 0.0
+    },
+    {
+      "fault_model": "stuck_at_-m",
+      "level": "frac=0.1",
+      "mean_criticality": 0.006620937791497757,
+      "max_criticality": 0.03303493093699217,
+      "most_critical_head": "L0_H5",
+      "ratio_to_crash_mean": 0.17183919804922523,
+      "spearman_vs_crash": 0.7981981981981981,
+      "top3_overlap_with_crash": 3,
+      "catastrophic_rate": 0.0
+    },
+    {
+      "fault_model": "stuck_at_-m",
+      "level": "frac=0.5",
+      "mean_criticality": 0.020576087465613253,
+      "max_criticality": 0.15343544483184815,
+      "most_critical_head": "L0_H5",
+      "ratio_to_crash_mean": 0.5340298429660747,
+      "spearman_vs_crash": 0.9230373230373231,
+      "top3_overlap_with_crash": 3,
+      "catastrophic_rate": 0.0
+    },
+    {
+      "fault_model": "stuck_at_-m",
+      "level": "frac=1",
+      "mean_criticality": 0.038529845497881375,
+      "max_criticality": 0.38032665848731995,
+      "most_critical_head": "L0_H5",
+      "ratio_to_crash_mean": 0.9999999939311814,
+      "spearman_vs_crash": 1.0,
+      "top3_overlap_with_crash": 3,
+      "catastrophic_rate": 0.0
+    }
+  ],
+  "multihead": [
+    {
+      "setting": "bitflip_ber1e-4",
+      "k_trials": 2000,
+      "mean_D_mean": 0.5432513416841377,
+      "catastrophic_trial_rate": 0.8515,
+      "mean_nonfinite_sample_rate": 0.849466,
+      "spearman_N_fail": 0.04120665349300074,
+      "safe_regions": [
+        {
+          "tau": 0.01,
+          "safe_boundary": null,
+          "n_fail_max": null,
+          "n_crit_fail_max": null,
+          "max_p_safe": 0.058823529411764705,
+          "coverage_percent": 0.0,
+          "smallest_required_tau": 0.5493766069412231,
+          "n_boundaries_evaluated": 175,
+          "threshold_name": "tau_0.010"
+        },
+        {
+          "tau": 0.025,
+          "safe_boundary": null,
+          "n_fail_max": null,
+          "n_crit_fail_max": null,
+          "max_p_safe": 0.058823529411764705,
+          "coverage_percent": 0.0,
+          "smallest_required_tau": 0.5493766069412231,
+          "n_boundaries_evaluated": 175,
+          "threshold_name": "tau_0.025"
+        },
+        {
+          "tau": 0.05,
+          "safe_boundary": null,
+          "n_fail_max": null,
+          "n_crit_fail_max": null,
+          "max_p_safe": 0.058823529411764705,
+          "coverage_percent": 0.0,
+          "smallest_required_tau": 0.5493766069412231,
+          "n_boundaries_evaluated": 175,
+          "threshold_name": "tau_0.050"
+        }
+      ],
+      "crash_mean_D_mean_same_sets": 0.35978198901785075,
+      "share_trials_worse_than_crash": 0.8925
+    },
+    {
+      "setting": "stuck_+m_frac0.10",
+      "k_trials": 2000,
+      "mean_D_mean": 0.03416850082214387,
+      "catastrophic_trial_rate": 0.0,
+      "mean_nonfinite_sample_rate": 0.0,
+      "spearman_N_fail": 0.9246522717847662,
+      "safe_regions": [
+        {
+          "tau": 0.01,
+          "safe_boundary": NaN,
+          "n_fail_max": NaN,
+          "n_crit_fail_max": NaN,
+          "max_p_safe": 0.8921568627450981,
+          "coverage_percent": 0.0,
+          "smallest_required_tau": 0.012131210416555405,
+          "n_boundaries_evaluated": 175,
+          "threshold_name": "tau_0.010"
+        },
+        {
+          "tau": 0.025,
+          "safe_boundary": "N_fail<=11, N_crit_fail<=0",
+          "n_fail_max": 11.0,
+          "n_crit_fail_max": 0.0,
+          "max_p_safe": 0.9546827794561934,
+          "coverage_percent": 16.55,
+          "smallest_required_tau": 0.012131210416555405,
+          "n_boundaries_evaluated": 175,
+          "threshold_name": "tau_0.025"
+        },
+        {
+          "tau": 0.05,
+          "safe_boundary": "N_fail<=23, N_crit_fail<=1",
+          "n_fail_max": 23.0,
+          "n_crit_fail_max": 1.0,
+          "max_p_safe": 0.9501915708812261,
+          "coverage_percent": 39.15,
+          "smallest_required_tau": 0.012131210416555405,
+          "n_boundaries_evaluated": 175,
+          "threshold_name": "tau_0.050"
+        }
+      ],
+      "crash_mean_D_mean_same_sets": 0.35978198901785075,
+      "share_trials_worse_than_crash": 0.0
+    }
+  ],
+  "bit_position_by_field": {
+    "exponent": {
+      "damage_mean": 0.06880360528411193,
+      "catastrophic_rate": 0.042708333333333334
+    },
+    "mantissa": {
+      "damage_mean": 1.2469698011637445e-06,
+      "catastrophic_rate": 0.0
+    },
+    "sign": {
+      "damage_mean": 8.024899959716929e-05,
+      "catastrophic_rate": 0.0
+    }
+  },
+  "damage_vs_delta_spearman_by_role": {
+    "least": 0.9925318792445227,
+    "top1": 0.987513044596206,
+    "top2": 0.9876842959616918,
+    "top3": 0.9878610449237691
+  },
+  "magnitude_spearman": [
+    {
+      "head_name": "L0_H2",
+      "role": "top3",
+      "op": "flip_exp_msb",
+      "spearman_abs_w_vs_damage": 0.11734402123087262
+    },
+    {
+      "head_name": "L0_H2",
+      "role": "top3",
+      "op": "negate",
+      "spearman_abs_w_vs_damage": 0.958178572899021
+    },
+    {
+      "head_name": "L0_H2",
+      "role": "top3",
+      "op": "x10",
+      "spearman_abs_w_vs_damage": 0.9608669955019951
+    },
+    {
+      "head_name": "L0_H2",
+      "role": "top3",
+      "op": "zero",
+      "spearman_abs_w_vs_damage": 0.9581804504764149
+    },
+    {
+      "head_name": "L0_H3",
+      "role": "top2",
+      "op": "flip_exp_msb",
+      "spearman_abs_w_vs_damage": 0.038206180084086806
+    },
+    {
+      "head_name": "L0_H3",
+      "role": "top2",
+      "op": "negate",
+      "spearman_abs_w_vs_damage": 0.9610622635509789
+    },
+    {
+      "head_name": "L0_H3",
+      "role": "top2",
+      "op": "x10",
+      "spearman_abs_w_vs_damage": 0.9609168854156089
+    },
+    {
+      "head_name": "L0_H3",
+      "role": "top2",
+      "op": "zero",
+      "spearman_abs_w_vs_damage": 0.9610853309303917
+    },
+    {
+      "head_name": "L0_H5",
+      "role": "top1",
+      "op": "flip_exp_msb",
+      "spearman_abs_w_vs_damage": -0.17406186059800435
+    },
+    {
+      "head_name": "L0_H5",
+      "role": "top1",
+      "op": "negate",
+      "spearman_abs_w_vs_damage": 0.9616826841835627
+    },
+    {
+      "head_name": "L0_H5",
+      "role": "top1",
+      "op": "x10",
+      "spearman_abs_w_vs_damage": 0.960743359413767
+    },
+    {
+      "head_name": "L0_H5",
+      "role": "top1",
+      "op": "zero",
+      "spearman_abs_w_vs_damage": 0.9616553252096852
+    },
+    {
+      "head_name": "L4_H0",
+      "role": "least",
+      "op": "flip_exp_msb",
+      "spearman_abs_w_vs_damage": 0.07635748184928987
+    },
+    {
+      "head_name": "L4_H0",
+      "role": "least",
+      "op": "negate",
+      "spearman_abs_w_vs_damage": 0.9690690374941727
+    },
+    {
+      "head_name": "L4_H0",
+      "role": "least",
+      "op": "x10",
+      "spearman_abs_w_vs_damage": 0.9706478129159173
+    },
+    {
+      "head_name": "L4_H0",
+      "role": "least",
+      "op": "zero",
+      "spearman_abs_w_vs_damage": 0.9690411420398979
+    }
+  ]
+}

@@ -98,3 +98,34 @@ SAFE_PROB = 0.95
 MIN_CONFIGS_PER_BOUNDARY = 100
 CLS_TAUS = (0.010, 0.025, 0.050)          # absolute D_pos_mean thresholds
 REG_ALPHAS = (0.10, 0.25, 0.50)           # fractions of clean MAPE
+
+# W_o weight-fault experiments (docs/wo_faults.md).  A head's crash is
+# equivalent to zeroing its d_k columns of the output projection W_o; these
+# experiments corrupt those columns in other ways instead.
+WO_FAULT_SEED = 4242
+WO_BER_LEVELS = (1e-6, 1e-5, 1e-4, 1e-3)        # per-bit flip probability
+WO_STUCK_VALUES_REL = (0.0, 1.0, -1.0)          # x max|W_o| of the head's layer
+WO_STUCK_FRACS = (0.01, 0.10, 0.50, 1.00)       # fraction of the head's W_o weights stuck
+WO_REPEATS = _env_int("FT_WO_REPEATS", 10)      # random repeats per stochastic fault level
+WO_K_TRIALS = _env_int("FT_WO_K_TRIALS", 2_000)  # random multi-head trials per W_o setting
+WO_MULTIHEAD_SETTINGS = (                       # (label, spec) for the multi-head study
+    ("bitflip_ber1e-4", {"kind": "bitflip_ber", "p": 1e-4}),
+    ("stuck_+m_frac0.10", {"kind": "stuck_at", "value_rel": 1.0, "frac": 0.10}),
+)
+WO_SANITY_MULTI = 50                            # multi-head sets in the zero-vs-mask check
+# Deep-dive on the most critical heads.  Values marked "rel" are multiples of
+# m = max|W_o| of the head's layer; "abs" values are used as they are.
+WO_VALUE_GRID = (
+    ("0", 0.0, "abs"),
+    ("+m/2", 0.5, "rel"), ("-m/2", -0.5, "rel"),
+    ("+m", 1.0, "rel"), ("-m", -1.0, "rel"),
+    ("+10m", 10.0, "rel"), ("-10m", -10.0, "rel"),
+    ("+1e2", 1e2, "abs"), ("-1e2", -1e2, "abs"),
+    ("+1e4", 1e4, "abs"), ("-1e4", -1e4, "abs"),
+    ("+1e6", 1e6, "abs"), ("-1e6", -1e6, "abs"),
+)
+WO_SWEEP_SINGLE = _env_int("FT_WO_SWEEP_SINGLE", 50)   # single weights per value
+WO_SWEEP_ROWS = _env_int("FT_WO_SWEEP_ROWS", 8)        # whole W_o rows per value
+WO_SWEEP_COLUMNS = _env_int("FT_WO_SWEEP_COLUMNS", 8)  # whole W_o columns per value
+WO_DEEPDIVE_SAMPLES = _env_int("FT_WO_SAMPLES", 30)    # weights per magnitude bin / bit
+WO_DEEPDIVE_N_CRITICAL = 3                      # top-N critical heads (+ the least critical)

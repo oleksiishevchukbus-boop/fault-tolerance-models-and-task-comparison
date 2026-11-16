@@ -115,6 +115,9 @@ a GPU box reproduces the original fault-injection protocol.
 - How to set up the environment and datasets: [setup.md](setup.md).
 - How to run the notebooks, the environment variables and the reports: [running.md](running.md).
 - Every metric, its formula and the function computing it: [metrics.md](metrics.md).
+- Faults injected into the output projection `W_o` instead of the crash mask
+  (bit flips, stuck-at values, and a deep-dive on the most critical heads):
+  [wo_faults.md](wo_faults.md).
 
 ## Data
 

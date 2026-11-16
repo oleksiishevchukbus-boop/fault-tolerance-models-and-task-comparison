@@ -30,6 +30,7 @@ model that was trained clean. For each model the notebooks measure:
 | understand how the three architectures differ | [docs/architectures.md](docs/architectures.md) |
 | know what a column or metric means | [docs/metrics.md](docs/metrics.md) |
 | set up and re-run the experiments | [docs/setup.md](docs/setup.md), then [docs/running.md](docs/running.md) |
+| see faults injected into the W_o weights instead of crashes | [docs/wo_faults.md](docs/wo_faults.md), reports `reports/<family>/<dataset>_wo_faults_report_EN.docx` |
 
 You don't need to run anything to read the results. The notebooks ship with
 their outputs stored.
@@ -74,6 +75,7 @@ docs/
   study_design.md          model, fault protocol, compute budget
   architectures.md         base_transformer vs tiny_vit vs tiny_gpt2
   metrics.md               every metric: meaning, formula, computing function, caveats
+  wo_faults.md             W_o weight-fault experiments (bit flips, stuck-at, deep-dive)
 src/faulttol/              shared library, one implementation for every experiment
   config.py                architectures, seeds, fault protocol, thresholds
   model.py                 encoder + head-crash mask
@@ -83,10 +85,12 @@ src/faulttol/              shared library, one implementation for every experime
   multihead.py             K random fault configurations, degradation grid
   saferegion.py            empirical 95% fault-tolerance boundaries
   plots.py                 vulnerability maps, degradation grids
+  wo_faults.py             faults in a head's W_o columns: bit flips, stuck-at, set/scale
   training.py              training loops, early stopping, checkpoints
   runtime.py               device / thread selection
   copula.py                unused here, kept from the source study
 notebooks/<family>/        ag_news.ipynb, cifar10.ipynb, pjm_regions.ipynb
+                           (ag_news, cifar10 also: <dataset>_wo_faults.ipynb)
 results/<family>/<dataset>/
   summary.json             headline numbers
   tables/*.csv             all result tables
@@ -98,6 +102,8 @@ scripts/
   make_experiment_report.py   rebuild the .docx reports from results/
   docx_helpers.py          Word formatting helpers used by the report script
   derive_notebooks.py      regenerate tiny_vit / tiny_gpt2 notebooks from base_transformer
+  make_wo_notebooks.py     regenerate the W_o weight-fault notebooks (--family)
+  make_wo_report.py        build the W_o weight-fault .docx reports from results/
 data/                      EMPTY skeleton - you download the datasets into it (see data/README.md)
   ag_news/                 train.csv, test.csv
   pjm/                     11 x <REGION>_hourly.csv

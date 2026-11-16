@@ -1,0 +1,159 @@
+check,config,exact,max_abs_diff
+zero_vs_mask_single,L0_H0,True,0.0
+zero_vs_mask_single,L0_H1,True,0.0
+zero_vs_mask_single,L0_H2,True,0.0
+zero_vs_mask_single,L0_H3,True,0.0
+zero_vs_mask_single,L0_H4,True,0.0
+zero_vs_mask_single,L0_H5,True,0.0
+zero_vs_mask_single,L1_H0,True,0.0
+zero_vs_mask_single,L1_H1,True,0.0
+zero_vs_mask_single,L1_H2,True,0.0
+zero_vs_mask_single,L1_H3,True,0.0
+zero_vs_mask_single,L1_H4,True,0.0
+zero_vs_mask_single,L1_H5,True,0.0
+zero_vs_mask_single,L2_H0,True,0.0
+zero_vs_mask_single,L2_H1,True,0.0
+zero_vs_mask_single,L2_H2,True,0.0
+zero_vs_mask_single,L2_H3,True,0.0
+zero_vs_mask_single,L2_H4,True,0.0
+zero_vs_mask_single,L2_H5,True,0.0
+zero_vs_mask_single,L3_H0,True,0.0
+zero_vs_mask_single,L3_H1,True,0.0
+zero_vs_mask_single,L3_H2,True,0.0
+zero_vs_mask_single,L3_H3,True,0.0
+zero_vs_mask_single,L3_H4,True,0.0
+zero_vs_mask_single,L3_H5,True,0.0
+zero_vs_mask_single,L4_H0,True,0.0
+zero_vs_mask_single,L4_H1,True,0.0
+zero_vs_mask_single,L4_H2,True,0.0
+zero_vs_mask_single,L4_H3,True,0.0
+zero_vs_mask_single,L4_H4,True,0.0
+zero_vs_mask_single,L4_H5,True,0.0
+zero_vs_mask_single,L5_H0,True,0.0
+zero_vs_mask_single,L5_H1,True,0.0
+zero_vs_mask_single,L5_H2,True,0.0
+zero_vs_mask_single,L5_H3,True,0.0
+zero_vs_mask_single,L5_H4,True,0.0
+zero_vs_mask_single,L5_H5,True,0.0
+zero_vs_mask_multi,L0_H1;L0_H4;L0_H5;L1_H1;L1_H2;L1_H4;L1_H5;L2_H0;L2_H2;L2_H3;L3_H1;L3_H2;L3_H3;L3_H5;L4_H0;L4_H1;L4_H3;L4_H5;L5_H0;L5_H3;L5_H4,True,0.0
+zero_vs_mask_multi,L0_H1,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H2;L0_H4;L0_H5;L1_H0;L1_H1;L1_H2;L1_H4;L2_H1;L2_H4;L2_H5;L3_H2;L3_H4;L4_H1;L5_H0;L5_H2,True,0.0
+zero_vs_mask_multi,L0_H1;L0_H2;L0_H3;L0_H4;L0_H5;L1_H0;L1_H1;L1_H2;L1_H3;L1_H5;L2_H0;L2_H1;L2_H2;L2_H3;L3_H0;L3_H1;L3_H2;L3_H3;L3_H4;L3_H5;L4_H1;L4_H2;L4_H3;L4_H4;L5_H0;L5_H1;L5_H4;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H1;L0_H2;L0_H4;L0_H5;L1_H0;L1_H1;L1_H2;L1_H3;L1_H4;L1_H5;L2_H0;L2_H1;L2_H2;L2_H3;L2_H4;L3_H0;L3_H1;L3_H2;L3_H5;L4_H0;L4_H1;L4_H2;L4_H3;L4_H4;L4_H5;L5_H0;L5_H2;L5_H3;L5_H4;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H1;L0_H2;L0_H3;L0_H4;L1_H1;L1_H4;L1_H5;L2_H0;L2_H1;L2_H2;L2_H3;L2_H4;L3_H0;L3_H1;L3_H2;L3_H4;L3_H5;L4_H0;L4_H1;L4_H2;L4_H5;L5_H0;L5_H1;L5_H2;L5_H3;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H1;L0_H2;L0_H3;L0_H4;L0_H5;L1_H0;L1_H2;L1_H3;L1_H4;L2_H0;L2_H2;L2_H3;L2_H4;L3_H0;L3_H4;L3_H5;L4_H1;L4_H2;L4_H5;L5_H0,True,0.0
+zero_vs_mask_multi,L2_H4,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H1;L0_H2;L0_H3;L0_H4;L0_H5;L1_H0;L1_H1;L1_H2;L1_H3;L1_H4;L1_H5;L2_H0;L2_H1;L2_H2;L2_H3;L2_H4;L2_H5;L3_H0;L3_H1;L3_H2;L3_H3;L3_H4;L3_H5;L4_H0;L4_H1;L4_H2;L4_H3;L4_H4;L4_H5;L5_H0;L5_H1;L5_H2;L5_H3;L5_H4;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H1;L0_H3;L0_H4;L1_H2;L1_H3;L1_H4;L1_H5;L2_H0;L2_H1;L2_H2;L2_H3;L2_H4;L2_H5;L3_H1;L3_H3;L4_H1;L4_H2;L4_H5;L5_H0;L5_H1;L5_H3;L5_H4;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H2;L0_H5;L1_H0;L1_H1;L1_H2;L1_H3;L1_H4;L1_H5;L2_H0;L2_H3;L2_H4;L2_H5;L3_H0;L3_H2;L3_H3;L3_H4;L4_H0;L4_H1;L4_H2;L4_H4;L4_H5;L5_H1;L5_H3;L5_H4;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H1;L0_H2;L0_H3;L0_H4;L0_H5;L1_H0;L1_H1;L1_H2;L1_H3;L1_H4;L1_H5;L2_H0;L2_H1;L2_H2;L2_H3;L2_H4;L2_H5;L3_H0;L3_H1;L3_H2;L3_H4;L3_H5;L4_H0;L4_H1;L4_H2;L4_H4;L4_H5;L5_H0;L5_H1;L5_H2;L5_H3;L5_H4;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H1;L0_H2;L0_H3;L0_H4;L0_H5;L1_H0;L1_H1;L1_H2;L1_H3;L1_H4;L1_H5;L2_H0;L2_H2;L2_H3;L2_H4;L2_H5;L3_H0;L3_H1;L3_H2;L3_H3;L3_H4;L3_H5;L4_H0;L4_H1;L4_H2;L4_H3;L4_H4;L4_H5;L5_H0;L5_H1;L5_H2;L5_H3;L5_H4;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H1;L0_H2;L0_H3;L0_H4;L0_H5;L1_H0;L1_H3;L1_H4;L1_H5;L2_H4;L2_H5;L3_H0;L3_H1;L3_H2;L4_H0;L4_H2;L4_H3;L4_H5;L5_H1;L5_H2;L5_H3,True,0.0
+zero_vs_mask_multi,L0_H1;L0_H2;L0_H4;L1_H0;L1_H1;L1_H2;L1_H3;L1_H4;L2_H0;L2_H2;L2_H4;L3_H0;L3_H4;L3_H5;L4_H4;L4_H5;L5_H1,True,0.0
+zero_vs_mask_multi,L0_H1;L0_H2;L0_H3;L0_H4;L0_H5;L1_H0;L1_H1;L2_H3;L2_H4;L2_H5;L3_H0;L3_H2;L3_H4;L3_H5;L4_H1;L4_H3;L4_H4;L4_H5;L5_H0;L5_H3,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H1;L0_H2;L0_H3;L0_H4;L0_H5;L1_H0;L1_H1;L1_H2;L1_H3;L1_H4;L1_H5;L2_H0;L2_H1;L2_H2;L2_H3;L2_H4;L2_H5;L3_H0;L3_H1;L3_H2;L3_H3;L3_H4;L3_H5;L4_H0;L4_H1;L4_H2;L4_H3;L4_H4;L4_H5;L5_H0;L5_H1;L5_H2;L5_H3;L5_H4;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H2;L0_H3;L0_H4;L0_H5;L1_H0;L1_H3;L1_H4;L1_H5;L2_H2;L2_H4;L3_H0;L3_H3;L4_H0;L4_H1;L4_H2;L4_H3;L4_H4;L4_H5;L5_H0;L5_H1;L5_H2;L5_H4;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H2;L0_H3;L0_H5;L1_H0;L1_H1;L1_H2;L1_H3;L1_H4;L1_H5;L2_H0;L2_H1;L2_H3;L2_H4;L2_H5;L3_H0;L3_H1;L3_H2;L3_H3;L3_H4;L3_H5;L4_H0;L4_H1;L4_H2;L4_H3;L4_H4;L5_H0;L5_H1;L5_H2;L5_H4;L5_H5,True,0.0
+zero_vs_mask_multi,L2_H2;L2_H3;L4_H2;L5_H3,True,0.0
+zero_vs_mask_multi,L0_H1;L0_H3;L0_H4;L0_H5;L1_H1;L1_H2;L1_H4;L1_H5;L2_H1;L2_H2;L2_H3;L2_H4;L2_H5;L3_H0;L3_H1;L3_H2;L3_H4;L3_H5;L4_H0;L4_H1;L4_H2;L4_H4;L4_H5;L5_H0;L5_H1;L5_H3;L5_H4;L5_H5,True,0.0
+zero_vs_mask_multi,L1_H0;L1_H1;L2_H1;L3_H0;L4_H0;L4_H1;L4_H3;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H1;L0_H2;L0_H3;L0_H4;L0_H5;L1_H0;L1_H2;L1_H3;L1_H4;L1_H5;L2_H0;L2_H1;L2_H2;L2_H3;L2_H4;L2_H5;L3_H0;L3_H1;L3_H2;L3_H3;L3_H4;L3_H5;L4_H0;L4_H1;L4_H2;L4_H3;L4_H4;L5_H0;L5_H1;L5_H2;L5_H3;L5_H4;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H2;L0_H3;L0_H4;L0_H5;L1_H0;L1_H1;L1_H2;L1_H3;L1_H4;L1_H5;L2_H0;L2_H1;L2_H2;L2_H4;L2_H5;L3_H0;L3_H1;L3_H2;L3_H3;L3_H4;L3_H5;L4_H1;L4_H2;L4_H3;L4_H4;L4_H5;L5_H0;L5_H1;L5_H2;L5_H3;L5_H4;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H3;L2_H0;L3_H4;L4_H1;L5_H1;L5_H3;L5_H4,True,0.0
+zero_vs_mask_multi,L0_H1;L1_H0;L1_H1;L1_H2;L1_H5;L2_H1;L2_H3;L2_H5;L3_H0;L3_H1;L3_H3;L3_H4;L3_H5;L4_H2;L4_H4;L4_H5;L5_H0;L5_H2;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H1;L0_H2;L0_H4;L1_H0;L1_H1;L2_H2;L2_H3;L2_H4;L3_H0;L3_H1;L3_H3;L3_H4;L3_H5;L4_H0;L4_H3;L4_H5;L5_H1;L5_H3;L5_H5,True,0.0
+zero_vs_mask_multi,L2_H0;L3_H2;L3_H5;L4_H3,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H2;L0_H4;L0_H5;L1_H3;L1_H4;L1_H5;L2_H0;L2_H5;L3_H1;L3_H2;L4_H0;L4_H1;L4_H3;L4_H4;L4_H5;L5_H0;L5_H1;L5_H3;L5_H4;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H1;L0_H2;L0_H3;L0_H4;L0_H5;L1_H0;L1_H1;L1_H2;L1_H3;L1_H4;L1_H5;L2_H0;L2_H1;L2_H2;L2_H3;L2_H4;L2_H5;L3_H0;L3_H1;L3_H2;L3_H3;L3_H4;L3_H5;L4_H0;L4_H1;L4_H2;L4_H3;L4_H4;L4_H5;L5_H0;L5_H1;L5_H2;L5_H3;L5_H4;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H1;L1_H0;L1_H1;L1_H2;L1_H3;L3_H0;L3_H1;L4_H1;L4_H2;L5_H0,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H4;L0_H5;L1_H0;L1_H1;L1_H2;L1_H4;L1_H5;L2_H0;L2_H2;L2_H4;L2_H5;L3_H0;L3_H3;L3_H4;L3_H5;L4_H0;L4_H1;L4_H3;L4_H4;L4_H5;L5_H0;L5_H1;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H1;L0_H2;L0_H3;L0_H4;L0_H5;L1_H2;L1_H3;L1_H4;L1_H5;L2_H0;L2_H1;L2_H2;L2_H4;L2_H5;L3_H0;L3_H1;L3_H2;L3_H3;L3_H4;L3_H5;L4_H0;L4_H3;L4_H4;L4_H5;L5_H0;L5_H1;L5_H2;L5_H3;L5_H4;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H2;L0_H3;L0_H4;L1_H0;L1_H1;L1_H2;L1_H3;L1_H4;L2_H1;L2_H4;L2_H5;L3_H0;L3_H1;L3_H2;L3_H3;L3_H4;L4_H1;L4_H3;L4_H4;L4_H5;L5_H0;L5_H1;L5_H2;L5_H3;L5_H4;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H2;L0_H3;L0_H4;L0_H5;L1_H0;L1_H2;L1_H3;L1_H4;L2_H0;L2_H1;L2_H2;L2_H3;L2_H5;L3_H0;L3_H3;L3_H4;L3_H5;L4_H2;L4_H3;L4_H4;L4_H5;L5_H0;L5_H3;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H4;L1_H1;L1_H2;L1_H3;L2_H0;L2_H1;L2_H2;L2_H3;L2_H5;L3_H1;L3_H2;L3_H5;L4_H1;L4_H3;L4_H4;L4_H5;L5_H1;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H1;L0_H2;L0_H3;L1_H1;L1_H2;L1_H3;L1_H4;L1_H5;L2_H1;L2_H2;L3_H1;L3_H2;L3_H4;L3_H5;L4_H1;L4_H3;L5_H2;L5_H3,True,0.0
+zero_vs_mask_multi,L0_H3;L0_H5;L1_H1;L1_H2;L1_H3;L1_H4;L1_H5;L2_H1;L3_H0;L3_H3;L4_H2;L4_H5;L5_H0;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H2;L0_H3;L0_H4;L1_H2;L1_H3;L2_H3;L2_H4;L2_H5;L3_H0;L4_H0;L4_H5;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H1;L0_H2;L0_H4;L1_H1;L1_H4;L2_H0;L2_H2;L2_H5;L3_H1;L3_H4;L3_H5;L4_H1;L4_H2;L4_H3;L5_H1;L5_H4,True,0.0
+zero_vs_mask_multi,L0_H5;L1_H0;L1_H1;L1_H2;L1_H3;L2_H0;L2_H1;L2_H3;L2_H4;L2_H5;L3_H0;L3_H2;L3_H4;L3_H5;L4_H0;L4_H2;L4_H3;L4_H4;L5_H0;L5_H1;L5_H2;L5_H4,True,0.0
+zero_vs_mask_multi,L0_H1;L0_H2;L1_H0;L1_H4;L1_H5;L2_H0;L2_H1;L2_H4;L3_H0;L3_H4;L3_H5;L4_H2;L4_H3;L4_H4;L4_H5;L5_H0;L5_H3;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H2;L0_H3;L0_H5;L1_H1;L2_H1;L2_H2;L2_H5;L3_H0;L3_H1;L3_H2;L3_H4;L4_H0;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H1;L0_H2;L0_H3;L0_H4;L0_H5;L1_H0;L1_H1;L1_H2;L1_H3;L1_H4;L1_H5;L2_H0;L2_H1;L2_H2;L2_H3;L2_H4;L2_H5;L3_H0;L3_H1;L3_H2;L3_H4;L3_H5;L4_H0;L4_H1;L4_H2;L4_H3;L4_H4;L4_H5;L5_H0;L5_H1;L5_H2;L5_H3;L5_H4;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H1;L0_H2;L0_H3;L0_H4;L0_H5;L1_H0;L1_H2;L1_H3;L1_H4;L1_H5;L2_H0;L2_H1;L2_H2;L2_H3;L2_H4;L2_H5;L3_H0;L3_H1;L3_H2;L3_H3;L3_H4;L4_H0;L4_H2;L4_H3;L4_H4;L4_H5;L5_H0;L5_H1;L5_H2;L5_H3;L5_H4;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H2;L0_H3;L0_H4;L0_H5;L1_H0;L1_H1;L1_H2;L1_H3;L1_H4;L1_H5;L2_H0;L2_H1;L2_H2;L2_H4;L2_H5;L3_H1;L3_H3;L3_H4;L3_H5;L4_H0;L4_H1;L4_H2;L4_H3;L4_H4;L4_H5;L5_H1;L5_H2;L5_H3;L5_H4;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H2;L0_H5;L1_H0;L1_H1;L1_H4;L1_H5;L2_H2;L2_H5;L3_H0;L3_H1;L3_H2;L3_H3;L3_H4;L3_H5;L4_H0;L4_H3;L4_H4;L4_H5;L5_H0;L5_H1;L5_H3;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H0;L0_H1;L0_H2;L0_H3;L0_H4;L0_H5;L1_H0;L1_H1;L1_H2;L1_H3;L1_H4;L1_H5;L2_H0;L2_H1;L2_H2;L2_H3;L2_H4;L2_H5;L3_H0;L3_H1;L3_H2;L3_H4;L3_H5;L4_H0;L4_H1;L4_H2;L4_H3;L4_H4;L4_H5;L5_H0;L5_H1;L5_H2;L5_H4;L5_H5,True,0.0
+zero_vs_mask_multi,L0_H1;L0_H2;L1_H2;L3_H0;L3_H4;L3_H5;L4_H1;L4_H2;L4_H4,True,0.0
+zero_vs_mask_multi,L0_H2;L1_H2;L1_H4;L1_H5;L2_H5;L3_H0;L3_H3;L3_H4;L3_H5;L4_H1;L5_H2,True,0.0
+ber0_vs_clean,L0_H0,True,0.0
+double_flip_vs_clean,L0_H0 bit30,True,0.0
+ber0_vs_clean,L0_H1,True,0.0
+double_flip_vs_clean,L0_H1 bit11,True,0.0
+ber0_vs_clean,L0_H2,True,0.0
+double_flip_vs_clean,L0_H2 bit22,True,0.0
+ber0_vs_clean,L0_H3,True,0.0
+double_flip_vs_clean,L0_H3 bit11,True,0.0
+ber0_vs_clean,L0_H4,True,0.0
+double_flip_vs_clean,L0_H4 bit17,True,0.0
+ber0_vs_clean,L0_H5,True,0.0
+double_flip_vs_clean,L0_H5 bit19,True,0.0
+ber0_vs_clean,L1_H0,True,0.0
+double_flip_vs_clean,L1_H0 bit16,True,0.0
+ber0_vs_clean,L1_H1,True,0.0
+double_flip_vs_clean,L1_H1 bit25,True,0.0
+ber0_vs_clean,L1_H2,True,0.0
+double_flip_vs_clean,L1_H2 bit24,True,0.0
+ber0_vs_clean,L1_H3,True,0.0
+double_flip_vs_clean,L1_H3 bit7,True,0.0
+ber0_vs_clean,L1_H4,True,0.0
+double_flip_vs_clean,L1_H4 bit20,True,0.0
+ber0_vs_clean,L1_H5,True,0.0
+double_flip_vs_clean,L1_H5 bit11,True,0.0
+ber0_vs_clean,L2_H0,True,0.0
+double_flip_vs_clean,L2_H0 bit9,True,0.0
+ber0_vs_clean,L2_H1,True,0.0
+double_flip_vs_clean,L2_H1 bit24,True,0.0
+ber0_vs_clean,L2_H2,True,0.0
+double_flip_vs_clean,L2_H2 bit24,True,0.0
+ber0_vs_clean,L2_H3,True,0.0
+double_flip_vs_clean,L2_H3 bit8,True,0.0
+ber0_vs_clean,L2_H4,True,0.0
+double_flip_vs_clean,L2_H4 bit10,True,0.0
+ber0_vs_clean,L2_H5,True,0.0
+double_flip_vs_clean,L2_H5 bit30,True,0.0
+ber0_vs_clean,L3_H0,True,0.0
+double_flip_vs_clean,L3_H0 bit29,True,0.0
+ber0_vs_clean,L3_H1,True,0.0
+double_flip_vs_clean,L3_H1 bit6,True,0.0
+ber0_vs_clean,L3_H2,True,0.0
+double_flip_vs_clean,L3_H2 bit20,True,0.0
+ber0_vs_clean,L3_H3,True,0.0
+double_flip_vs_clean,L3_H3 bit17,True,0.0
+ber0_vs_clean,L3_H4,True,0.0
+double_flip_vs_clean,L3_H4 bit7,True,0.0
+ber0_vs_clean,L3_H5,True,0.0
+double_flip_vs_clean,L3_H5 bit29,True,0.0
+ber0_vs_clean,L4_H0,True,0.0
+double_flip_vs_clean,L4_H0 bit6,True,0.0
+ber0_vs_clean,L4_H1,True,0.0
+double_flip_vs_clean,L4_H1 bit12,True,0.0
+ber0_vs_clean,L4_H2,True,0.0
+double_flip_vs_clean,L4_H2 bit11,True,0.0
+ber0_vs_clean,L4_H3,True,0.0
+double_flip_vs_clean,L4_H3 bit7,True,0.0
+ber0_vs_clean,L4_H4,True,0.0
+double_flip_vs_clean,L4_H4 bit25,True,0.0
+ber0_vs_clean,L4_H5,True,0.0
+double_flip_vs_clean,L4_H5 bit9,True,0.0
+ber0_vs_clean,L5_H0,True,0.0
+double_flip_vs_clean,L5_H0 bit7,True,0.0
+ber0_vs_clean,L5_H1,True,0.0
+double_flip_vs_clean,L5_H1 bit2,True,0.0
+ber0_vs_clean,L5_H2,True,0.0
+double_flip_vs_clean,L5_H2 bit30,True,0.0
+ber0_vs_clean,L5_H3,True,0.0
+double_flip_vs_clean,L5_H3 bit10,True,0.0
+ber0_vs_clean,L5_H4,True,0.0
+double_flip_vs_clean,L5_H4 bit21,True,0.0
+ber0_vs_clean,L5_H5,True,0.0
+double_flip_vs_clean,L5_H5 bit2,True,0.0

@@ -9,4 +9,5 @@ from . import (  # noqa: F401
     saferegion,
     single_head,
     training,
+    wo_faults,
 )
